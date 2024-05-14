@@ -58,3 +58,26 @@ for(let i = 0; i < team.length; i++){
 
 
 }
+
+
+// Stampare le stesse informazioni su DOM sottoforma di stringhe
+
+const teamList = document.getElementById("team-list");
+
+const ul = document.createElement("ul");
+
+for(let i = 0 ; i < team.length; i++){
+
+    const member = team[i];
+
+    const li = document.createElement("li");
+
+    li.textContent = "Nome: " + member.name + " - Ruolo:  " + member.role + " - Foto:  " + member.image;
+
+    ul.appendChild(li);
+
+
+}
+
+teamList.appendChild(ul);
+
