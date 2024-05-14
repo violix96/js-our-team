@@ -33,16 +33,28 @@ const team = [
     },
 
     {
-        nome: "Scott Estrada",
+        name: "Scott Estrada",
         role: "Developer",
         image: "scott-estrada-developer.jpg"
     },
 
     {
         name: "Barbara Ramos",
-        role: " Graphic Designer",
-        imgage: "barbara-ramos-graphic-designer.jpg"
-    }
+        role: "Graphic Designer",
+        image: "barbara-ramos-graphic-designer.jpg"
+    },
 ];
 
 console.log(team);
+
+// Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
+
+for(let i = 0; i < team.length; i++){
+    const member = team[i];
+
+    console.log(member["name"]);
+    console.log(member["role"]);
+    console.log(member["image"]);
+
+
+}
