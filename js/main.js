@@ -60,24 +60,45 @@ for(let i = 0; i < team.length; i++){
 }
 
 
+// for( let element of team){
+//     console.log(element);
+// }
+
+
 // Stampare le stesse informazioni su DOM sottoforma di stringhe
 
 const teamList = document.getElementById("team-list");
 
 const ul = document.createElement("ul");
 
+
 for(let i = 0 ; i < team.length; i++){
 
     const member = team[i];
 
-    const li = document.createElement("li");
+    const liElement = document.createElement("li");
 
-    li.textContent = "Nome: " + member.name + " - Ruolo:  " + member.role + " - Foto:  " + member.image;
+    const nomePersona = document.createElement("h3");
+    nomePersona.innerText = member.name;
 
-    ul.appendChild(li);
+    const ruoloPersona = document.createElement("h5");
+    ruoloPersona.innerText = member.role;
+
+    const fotoPersona = document.createElement("p");
+    fotoPersona.innerText = member.image;
+
+    // li.textContent = "Nome: " + member.name + " - Ruolo:  " + member.role + " - Foto:  " + member.image;
+
+    liElement.append(nomePersona);
+    liElement.append(ruoloPersona);
+    liElement.append(fotoPersona);
+
+    teamList.append(liElement);
+
+    // ul.appendChild(li);
 
 
 }
 
-teamList.appendChild(ul);
+// teamList.appendChild(ul);
 
