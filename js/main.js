@@ -17,7 +17,7 @@ const team = [
     {
         name: "Angela Caroll",
         role: "Chief Editor",
-        image: "angela-carrol-chief-editor.jpg"
+        image: "angela-caroll-chief-editor.jpg"
     },
 
     {
@@ -92,6 +92,14 @@ for(let i = 0 ; i < team.length; i++){
     liElement.append(nomePersona);
     liElement.append(ruoloPersona);
     liElement.append(fotoPersona);
+
+
+// sostituzione della stringa foto con le foto effettive 
+    const imgPersona = document.createElement("img");
+    imgPersona.src = 'img/' + member.image;
+    liElement.append(imgPersona);
+
+
 
     teamList.append(liElement);
 
